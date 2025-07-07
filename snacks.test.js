@@ -1,5 +1,4 @@
 const { default: expect } = require('expect');
-// const { afterEach } = require('jest-circus');
 
 const { getInitials, createSlug, average, isPalindrome, findPostById } = require('./snacks');
 
@@ -64,6 +63,7 @@ describe('Operazioni su Array', () => {
         expect(() => findPostById([34, 67], 2)).toThrow(`L'array posts non è nel formato corretto.`)
     })
 
+    // Alternativa
     // test("se ogni post ha le proprietà: id, title e slug", () => {
     //     posts.forEach(post => {
     //         expect(post).toHaveProperty("id");
@@ -93,6 +93,3 @@ describe('Generazione di Slug', () => {
     })
 
 })
-
-
-
