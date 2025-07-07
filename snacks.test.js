@@ -47,7 +47,7 @@ describe("average", () => {
 
 describe("isPalindrome", () => {
     test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
-        expect(isPalindrome("Anna")).toBe(true);
+        expect(isPalindrome("Anna ")).toBeTruthy();
     })
 })
 

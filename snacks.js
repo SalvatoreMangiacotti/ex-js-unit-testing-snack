@@ -21,8 +21,8 @@ function average(numbers) {
 
 // SNACK 5
 function isPalindrome(str) {
-    const string = str.toLowerCase()
-    return string.split("").reverse().join("") === string;
+    const string = str.toLowerCase().trim()
+    return string.split("").reverse().join("").trim() === string;
 }
 
 // SNACK 7
