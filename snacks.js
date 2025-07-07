@@ -5,10 +5,10 @@ function getInitials(name) {
 
 // SNACK 2 - SNACK 4 - SNACK 6
 function createSlug(string) {
-    if (string === "") {
-        throw new Error("Il titolo è vuoto!")
+    if (!string) {
+        throw new Error("Titolo non valido")
     }
-    return string.toLowerCase().replace(/\s+/g, '-')
+    return string.toLowerCase().replaceAll(" ", "-")
 }
 
 
