@@ -90,13 +90,16 @@ describe("findPostById", () => {
     test("restituisce il post corretto dato l'array di post e l'id", () => {
         const postToCheck = posts[2];
         expect(findPostById(posts, 3)).toEqual(postToCheck)
+        expect(findPostById(posts, 5)).toBe(null);
+        expect(() => findPostById(posts, "ciao")).toThrow('"ciao" non è un id')
+        expect(() => findPostById([34, 67], 2)).toThrow(`L'array posts non è nel formato corretto.`)
     })
 
-    test("se ogni post ha le proprietà: id, title e slug", () => {
-        posts.forEach(post => {
-            expect(post).toHaveProperty("id");
-            expect(post).toHaveProperty("title");
-            expect(post).toHaveProperty("slug");
-        });
-    })
+    // test("se ogni post ha le proprietà: id, title e slug", () => {
+    //     posts.forEach(post => {
+    //         expect(post).toHaveProperty("id");
+    //         expect(post).toHaveProperty("title");
+    //         expect(post).toHaveProperty("slug");
+    //     });
+    // })
 })
